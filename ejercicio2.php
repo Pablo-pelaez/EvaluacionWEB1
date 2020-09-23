@@ -32,28 +32,43 @@
         </div>
 
         <div class="container">
-            <form action="ejercicio2.php" method="$_POST">
+            <form action="ejercicio2.php" method="POST">
                 <div class="form-group">
                     <h2 class="text-center">Prevención de Riesgo de IMC</h2>
-                    <label for="example"><b>Ingresa tu peso</b></label>
-                    <input type="number" class="form-control" name="peso">
+                    <label for="example"><b>Ingresa tu peso(kg)</b></label>
+                    <input type="number" step="0.01" class="form-control" name="peso">
                 </div>
                 <div class="form-group">
-                    <label for="example"><b>Ingresa tu altura</b></label>
-                    <input type="number" class="form-control" name="altura">
+                    <label for="example"><b>Ingresa tu altura(m)</b></label>
+                    <input type="number" step="0.01" class="form-control" name="altura">
                 </div>
                 <button type="submit" class="btn btn-info" name="btnCalcular" value="cj">Calcular</button>
 
 
             </form>
 
-            <?php if (isset($_POST["btnCalcular"])): ?>
+            <?php if (isset($_POST["btnCalcular"])) : ?>
 
-                <?php
-                // $peso = $_POST["peso"];
-                // $altura = $_POST["altura"];
-                echo("subnormal");
-                ?>
+                <h4> 
+                    <?php
+                        $peso = $_POST["peso"];
+                        $altura = $_POST["altura"];
+                        $imc = $peso / ($altura * $altura);
+                        
+                        // if($imc < 18.5)
+                        // {
+                        //     else
+                        //     {
+                        //         if($imc > 18.5 && $imc <= 24.9)
+                        //         {
+
+                        //         }
+                        //     }
+                        // }
+
+                    ?>
+                </h4>
+                
 
             <?php endif; ?>
 
