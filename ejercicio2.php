@@ -31,10 +31,10 @@
         <div class="container my-5">
         </div>
 
-        <div class="container">
+        <div class="container" style="background-color: steelblue;">
             <form action="ejercicio2.php" method="POST">
                 <div class="form-group">
-                    <h2 class="text-center">Prevención de Riesgo de IMC</h2>
+                    <h2 class="text-center pt-4">Prevención de Riesgo de IMC</h2>
                     <label for="example"><b>Ingresa tu peso(kg)</b></label>
                     <input type="number" step="0.01" class="form-control" name="peso">
                 </div>
@@ -49,26 +49,66 @@
 
             <?php if (isset($_POST["btnCalcular"])) : ?>
 
-                <h4> 
+                <h4 class="mt-4 pb-4">
                     <?php
-                        $peso = $_POST["peso"];
-                        $altura = $_POST["altura"];
-                        $imc = $peso / ($altura * $altura);
-                        
-                        // if($imc < 18.5)
-                        // {
-                        //     else
-                        //     {
-                        //         if($imc > 18.5 && $imc <= 24.9)
-                        //         {
+                    $peso = $_POST["peso"];
+                    $altura = $_POST["altura"];
+                    $imc = $peso / ($altura * $altura);
 
-                        //         }
-                        //     }
-                        // }
+                    if ($imc < 18.5) 
+                    {
+                        echo("Según tu IMC (".$imc.") tu peso es insuficiente");
+                    }
+                    else
+                    {
+                        if($imc >= 18.5 && $imc <= 24.99)
+                        {
+                            echo("Según tu IMC (".$imc.") tu peso es el adecuado");
+                        }
+                        else
+                        {
+                            if($imc >= 25 && $imc <= 26.99)
+                            {
+                                echo("Según tu IMC (".$imc.") sufres de sobrepeso grado I");
+                            }
+                            else
+                            {
+                                if($imc >= 27 && $imc <= 29.99)
+                                {
+                                    echo("Según tu IMC (".$imc.") sufres de sobrepeso grado II (preobesidad)");
+                                }
+                                else
+                                {
+                                    if($imc >= 30 && $imc <= 34.99)
+                                    {
+                                        echo("Según tu IMC (".$imc.") sufres de obesidad tipo I");
+                                    }
+                                    else
+                                    {
+                                        if($imc >= 35 && $imc <= 39.99)
+                                        {
+                                            echo("Según tu IMC (".$imc.") sufres de obesidad tipo II");
+                                        }
+                                        else
+                                        {
+                                            if($imc >= 40 && $imc <= 49.99)
+                                            {
+                                                echo("Según tu IMC (".$imc.") sufres de obesidad tipo III");
+                                            }
+                                            else
+                                            {
+                                                echo("Según tu IMC (".$imc.") sufres de obesidad tipo IV");
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
 
                     ?>
                 </h4>
-                
+
 
             <?php endif; ?>
 
