@@ -19,7 +19,7 @@
                 <div class="btn-group mt-3" role="group" aria-label="Basic example">
                     <a href="index.php"><button type="button" class="btn btn-lg btn-primary">Ejercicio1</button></a>
                     <a href="ejercicio2.php"><button type="button" class="btn btn-lg btn-dark">Ejercicio2</button></a>
-                    <a href="ejercicio3.php"><button type="button" class="btn btn-lg btn-danger">Ejercicio3</button></a>
+                    <a href="ejercicio6.php"><button type="button" class="btn btn-lg btn-danger">Ejercicio3</button></a>
                     <a href="ejercicio4.php"><button type="button" class="btn btn-lg btn-success">Ejercicio4</button></a>
                     <a href="ejercicio5.php"><button type="button" class="btn btn-lg btn-info">Ejercicio5</button></a>
                 </div>
