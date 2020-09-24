@@ -31,7 +31,7 @@
         <div class="container my-5">
         </div>
 
-        <div class="container" style="background-color: steelblue;">
+        <div class="container">
             <form action="ejercicio2.php" method="POST">
                 <div class="form-group">
                     <h2 class="text-center pt-4">Prevención de Riesgo de IMC</h2>
