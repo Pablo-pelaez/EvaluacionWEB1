@@ -17,11 +17,10 @@
                 <p>The PHP Manual is available online in a selection of languages.
                     Please pick a language from the list below.</p>
                 <div class="btn-group mt-3" role="group" aria-label="Basic example">
-                    <a href="index.php"><button type="button" class="btn btn-lg btn-primary">Ejercicio1</button></a>
-                    <a href="ejercicio2.php"><button type="button" class="btn btn-lg btn-dark">Ejercicio2</button></a>
-                    <a href="ejercicio6.php"><button type="button" class="btn btn-lg btn-danger">Ejercicio3</button></a>
-                    <a href="ejercicio4.php"><button type="button" class="btn btn-lg btn-success">Ejercicio4</button></a>
-                    <a href="ejercicio5.php"><button type="button" class="btn btn-lg btn-info">Ejercicio5</button></a>
+                    <a href="index.php"><button type="button" class="btn btn-lg btn-primary mr-3">Ejercicio1</button></a>
+                    <a href="ejercicio2.php"><button type="button" class="btn btn-lg btn-dark mr-3">Ejercicio2</button></a>
+                    <a href="ejercicio6.php"><button type="button" class="btn btn-lg btn-danger mr-3">Ejercicio3</button></a>
+                    <a href="ejercicio4.php"><button type="button" class="btn btn-lg btn-success mr-3">Ejercicio4</button></a>
                 </div>
             </div>
         </div>
