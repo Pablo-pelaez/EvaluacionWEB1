@@ -48,61 +48,44 @@
 
             <?php if (isset($_POST["btnCalcular"])) : ?>
 
-                <h4 class="mt-4 pb-4 borde">
+                <h4 class="mt-4 pb-4">
                     <?php
                     $peso = $_POST["peso"];
                     $altura = $_POST["altura"];
                     $imc = $peso / ($altura * $altura);
 
-                    if ($imc < 18.5) 
-                    {
-                        echo("Según tu IMC (".$imc.") tu peso es insuficiente");
-                    }
-                    else
-                    {
-                        if($imc >= 18.5 && $imc <= 24.99)
-                        {
-                            echo("Según tu IMC (".$imc.") tu peso es el adecuado");
-                        }
-                        else
-                        {
-                            if($imc >= 25 && $imc <= 26.99)
-                            {
-                                echo("Según tu IMC (".$imc.") sufres de sobrepeso grado I");
-                            }
-                            else
-                            {
-                                if($imc >= 27 && $imc <= 29.99)
-                                {
-                                    echo("Según tu IMC (".$imc.") sufres de sobrepeso grado II (preobesidad)");
-                                }
-                                else
-                                {
-                                    if($imc >= 30 && $imc <= 34.99)
-                                    {
-                                        echo("Según tu IMC (".$imc.") sufres de obesidad tipo I");
-                                    }
-                                    else
-                                    {
-                                        if($imc >= 35 && $imc <= 39.99)
-                                        {
-                                            echo("Según tu IMC (".$imc.") sufres de obesidad tipo II");
-                                        }
-                                        else
-                                        {
-                                            if($imc >= 40 && $imc <= 49.99)
-                                            {
-                                                echo("Según tu IMC (".$imc.") sufres de obesidad tipo III");
-                                            }
-                                            else
-                                            {
-                                                echo("Según tu IMC (".$imc.") sufres de obesidad tipo IV");
+                    if ($peso > 0 && $altura > 0) {
+                        if ($imc < 18.5) {
+                            echo ("Según tu IMC (" . $imc . ") tu peso es insuficiente");
+                        } else {
+                            if ($imc >= 18.5 && $imc <= 24.99) {
+                                echo ("Según tu IMC (" . $imc . ") tu peso es el adecuado");
+                            } else {
+                                if ($imc >= 25 && $imc <= 26.99) {
+                                    echo ("Según tu IMC (" . $imc . ") sufres de sobrepeso grado I");
+                                } else {
+                                    if ($imc >= 27 && $imc <= 29.99) {
+                                        echo ("Según tu IMC (" . $imc . ") sufres de sobrepeso grado II (preobesidad)");
+                                    } else {
+                                        if ($imc >= 30 && $imc <= 34.99) {
+                                            echo ("Según tu IMC (" . $imc . ") sufres de obesidad tipo I");
+                                        } else {
+                                            if ($imc >= 35 && $imc <= 39.99) {
+                                                echo ("Según tu IMC (" . $imc . ") sufres de obesidad tipo II");
+                                            } else {
+                                                if ($imc >= 40 && $imc <= 49.99) {
+                                                    echo ("Según tu IMC (" . $imc . ") sufres de obesidad tipo III");
+                                                } else {
+                                                    echo ("Según tu IMC (" . $imc . ") sufres de obesidad tipo IV");
+                                                }
                                             }
                                         }
                                     }
                                 }
                             }
                         }
+                    } else {
+                        echo ("Debes ingresar valores válidos");
                     }
 
                     ?>

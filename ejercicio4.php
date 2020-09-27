@@ -36,12 +36,12 @@
                     <label for="exampleInputPassword1"><b>Horas trabajadas a la semana</b></label>
                     <input type="number" class="form-control" name="horasTrabajadas">
                 </div>
-                <button type="submit" class="btn btn-primary" name="btnCalcular" value="cj">Calcular</button>
+                <button type="submit" class="btn btn-primary my-4" name="btnCalcular" value="cj">Calcular</button>
             </form>
 
             <?php if (isset($_POST["btnCalcular"])) : ?>
 
-                <h4 class="mt-4 borde">
+                <h4>
                     <?php
                     $horasSemana = $_POST["horasTrabajadas"];
                     $sueldoBase = 40 * 20000;
