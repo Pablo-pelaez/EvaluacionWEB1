@@ -33,16 +33,33 @@
             <form action="ejercicio4.php" method="POST">
                 <div class="form-group">
                     <h2 class="text-center mb-5">TU SUELDO POSTOBON</h2>
-                    <label for="exampleInputPassword1"><b>Horas trabajadas al día</b></label>
+                    <label for="exampleInputPassword1"><b>Horas trabajadas a la semana</b></label>
                     <input type="number" class="form-control" name="horasTrabajadas">
                 </div>
                 <button type="submit" class="btn btn-primary" name="btnCalcular" value="cj">Calcular</button>
             </form>
+
+            <?php if (isset($_POST["btnCalcular"])) : ?>
+
+                <h4 class="mt-4 borde">
+                    <?php
+                    $horasSemana = $_POST["horasTrabajadas"];
+                    $sueldoBase = 40 * 20000;
+
+                    if ($horasSemana <= 40) {
+                        $sueldo = $sueldoBase;
+                    } else {
+                        $sueldoHorasExtra = ($horasSemana - 40) * 25000;
+                        $sueldo = $sueldoBase + $sueldoHorasExtra;
+                    }
+
+                    echo ("Tu salario semanal es de: " . $sueldo);
+                    ?>
+                </h4>
+
+            <?php endif; ?>
         </div>
 
-        <?php if (isset($_POST["btnCalcular"])) : ?>
-            <?php?>
-        <?php endif; ?>
     </main>
 
     <footer>

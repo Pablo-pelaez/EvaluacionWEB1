@@ -19,7 +19,7 @@
                 <div class="btn-group mt-3" role="group" aria-label="Basic example">
                     <a href="index.php"><button type="button" class="btn btn-lg btn-primary mr-3">Ejercicio1</button></a>
                     <a href="ejercicio2.php"><button type="button" class="btn btn-lg btn-dark mr-3">Ejercicio2</button></a>
-                    <a href="ejercicio6.php"><button type="button" class="btn btn-lg btn-danger mr-3">Ejercicio3</button></a>
+                    <a href="ejercicio6.php"><button type="button" class="btn btn-lg btn-danger mr-3">Ejercicio6</button></a>
                     <a href="ejercicio4.php"><button type="button" class="btn btn-lg btn-success mr-3">Ejercicio4</button></a>
                 </div>
             </div>
@@ -41,14 +41,14 @@
                     <label for="example"><b>Ingresa tu altura(m)</b></label>
                     <input type="number" step="0.01" class="form-control" name="altura">
                 </div>
-                <button type="submit" class="btn btn-info" name="btnCalcular" value="cj">Calcular</button>
+                <button type="submit" class="btn btn-danger" name="btnCalcular" value="cj">Calcular</button>
 
 
             </form>
 
             <?php if (isset($_POST["btnCalcular"])) : ?>
 
-                <h4 class="mt-4 pb-4">
+                <h4 class="mt-4 pb-4 borde">
                     <?php
                     $peso = $_POST["peso"];
                     $altura = $_POST["altura"];

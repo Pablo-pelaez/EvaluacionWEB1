@@ -40,48 +40,50 @@
                 </div>
                 <button type="submit" class="btn btn-info" name="btnCalcular" value="cj">Calcular</button>
             </form>
+
+            <?php if (isset($_POST["btnCalcular"])) : ?>
+
+                <?php
+
+                $numerospares = $_POST["numPares"];
+                $tamañoVector = ($numerospares * 2);
+                $vectorPares = array();
+                $vectorRelleno = array();
+                //$vectorI = array();
+
+
+
+                for ($i = 1; $i <= $tamañoVector; $i++) {
+                    $vectorRelleno[] = +$i;
+                }
+
+                ?>
+
+                <table class="table table-sm mt-5">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th class="text-center">Números Pares</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php foreach ($vectorRelleno as $valor) : ?>
+                            <tr>
+                                <th><?php if ($valor % 2 == 0) {
+                                        echo ($valor);
+                                        echo ("<br>");
+                                    } ?></th>
+                            </tr>
+
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+
+            <?php endif; ?>
         </div>
 
 
-        <?php if (isset($_POST["btnCalcular"])) : ?>
 
-            <?php
-
-            $numerospares = $_POST["numPares"];
-            $tamañoVector = ($numerospares * 2);
-            $vectorPares = array();
-            $vectorRelleno = array();
-            //$vectorI = array();
-
-
-
-            for ($i = 1; $i <= $tamañoVector; $i++) {
-                $vectorRelleno[] = +$i;
-            }
-
-            ?>
-
-            <table class="table table-sm mt-5">
-                <thead class="thead-dark">
-                    <tr>
-                        <th class="text-center">Números Pares</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <?php foreach ($vectorRelleno as $valor) : ?>
-                        <tr>
-                            <th><?php if ($valor % 2 == 0) {
-                                    echo ($valor);
-                                    echo ("<br>");
-                                } ?></th>
-                        </tr>
-
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-
-        <?php endif; ?>
 
 
 
