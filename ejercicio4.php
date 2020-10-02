@@ -20,7 +20,7 @@
                 <div class="btn-group mt-3" role="group" aria-label="Basic example">
                     <a href="index.php"><button type="button" class="btn btn-lg btn-primary mr-3">Ejercicio1</button></a>
                     <a href="ejercicio2.php"><button type="button" class="btn btn-lg btn-dark mr-3">Ejercicio2</button></a>
-                    <a href="ejercicio6.php"><button type="button" class="btn btn-lg btn-danger mr-3">Ejercicio3</button></a>
+                    <a href="ejercicio6.php"><button type="button" class="btn btn-lg btn-danger mr-3">Ejercicio6</button></a>
                     <a href="ejercicio4.php"><button type="button" class="btn btn-lg btn-success mr-3">Ejercicio4</button></a>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 <h4>
                     <?php
                     $horasSemana = $_POST["horasTrabajadas"];
-                    $sueldoBase = 40 * 20000;
+                    $sueldoBase = $horasSemana * 20000;
 
                     if ($horasSemana <= 40) {
                         $sueldo = $sueldoBase;

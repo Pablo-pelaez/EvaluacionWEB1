@@ -52,31 +52,45 @@
                     <?php
                     $peso = $_POST["peso"];
                     $altura = $_POST["altura"];
-                    $imc = $peso / ($altura * $altura);
 
-                    if ($peso > 0 && $altura > 0) {
-                        if ($imc < 18.5) {
-                            echo ("Según tu IMC (" . $imc . ") tu peso es insuficiente");
-                        } else {
-                            if ($imc >= 18.5 && $imc <= 24.99) {
-                                echo ("Según tu IMC (" . $imc . ") tu peso es el adecuado");
+                    if($altura !=0)
+                    {
+                        $imc = $peso / ($altura * $altura);
+                    }
+                    else
+                    {
+                        $imc = 0;
+                        echo("No puedes dividir por cero");
+                        echo("<br>");
+                    }
+                    
+
+
+                        if ($peso > 0 && $altura > 0) 
+                        {
+                            if ($imc < 18.5) {
+                                echo ("Según tu IMC (" . $imc . ") tu peso es insuficiente");
                             } else {
-                                if ($imc >= 25 && $imc <= 26.99) {
-                                    echo ("Según tu IMC (" . $imc . ") sufres de sobrepeso grado I");
+                                if ($imc >= 18.5 && $imc <= 24.99) {
+                                    echo ("Según tu IMC (" . $imc . ") tu peso es el adecuado");
                                 } else {
-                                    if ($imc >= 27 && $imc <= 29.99) {
-                                        echo ("Según tu IMC (" . $imc . ") sufres de sobrepeso grado II (preobesidad)");
+                                    if ($imc >= 25 && $imc <= 26.99) {
+                                        echo ("Según tu IMC (" . $imc . ") sufres de sobrepeso grado I");
                                     } else {
-                                        if ($imc >= 30 && $imc <= 34.99) {
-                                            echo ("Según tu IMC (" . $imc . ") sufres de obesidad tipo I");
+                                        if ($imc >= 27 && $imc <= 29.99) {
+                                            echo ("Según tu IMC (" . $imc . ") sufres de sobrepeso grado II (preobesidad)");
                                         } else {
-                                            if ($imc >= 35 && $imc <= 39.99) {
-                                                echo ("Según tu IMC (" . $imc . ") sufres de obesidad tipo II");
+                                            if ($imc >= 30 && $imc <= 34.99) {
+                                                echo ("Según tu IMC (" . $imc . ") sufres de obesidad tipo I");
                                             } else {
-                                                if ($imc >= 40 && $imc <= 49.99) {
-                                                    echo ("Según tu IMC (" . $imc . ") sufres de obesidad tipo III");
+                                                if ($imc >= 35 && $imc <= 39.99) {
+                                                    echo ("Según tu IMC (" . $imc . ") sufres de obesidad tipo II");
                                                 } else {
-                                                    echo ("Según tu IMC (" . $imc . ") sufres de obesidad tipo IV");
+                                                    if ($imc >= 40 && $imc <= 49.99) {
+                                                        echo ("Según tu IMC (" . $imc . ") sufres de obesidad tipo III");
+                                                    } else {
+                                                        echo ("Según tu IMC (" . $imc . ") sufres de obesidad tipo IV");
+                                                    }
                                                 }
                                             }
                                         }
@@ -84,9 +98,13 @@
                                 }
                             }
                         }
-                    } else {
-                        echo ("Debes ingresar valores válidos");
-                    }
+                        else
+                        {
+                            echo("Debes ingresar valores válidos");
+                        }
+
+                    
+
 
                     ?>
                 </h4>

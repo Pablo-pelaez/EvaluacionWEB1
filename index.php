@@ -63,29 +63,39 @@
                     $numero2 = $_POST["numero2"];
                     $operador = $_POST["operador"];
 
-                    if ($numero1 !== "" && $numero2 !== "") {
+                    if ($numero1 !== "" &&  $numero2 !== "") 
+                    {
                         switch ($operador) {
                             case 1:
                                 $resultado = $numero1 + $numero2;
                                 echo ("El resultado es: " . $resultado);
-                                break;
+                            break;
 
                             case 2:
                                 $resultado = $numero1 - $numero2;
                                 echo ("El resultado es: " . $resultado);
-                                break;
+                            break;
 
                             case 3:
                                 $resultado = $numero1 * $numero2;
                                 echo ("El resultado es: " . $resultado);
-                                break;
+                            break;
 
                             case 4:
-                                $resultado = $numero1 / $numero2;
-                                echo ("El resultado es: " . $resultado);
-                                break;
+                                if($numero2 != 0)
+                                {
+                                    $resultado = $numero1 / $numero2;
+                                    echo ("El resultado es: " . $resultado);
+                                }
+                                else
+                                {
+                                    echo("No puedes dividir por cero");
+                                }
+                            break;
+                                
                         }
-                    } else {
+                    } else 
+                    {
                         echo ("Debes ingresar los dos valores");
                     }
                     ?>

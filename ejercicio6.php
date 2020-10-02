@@ -49,8 +49,6 @@
                 $tamañoVector = ($numerospares * 2);
                 $vectorPares = array();
                 $vectorRelleno = array();
-                //$vectorI = array();
-
 
 
                 for ($i = 1; $i <= $tamañoVector; $i++) {
